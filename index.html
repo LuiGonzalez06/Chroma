@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chroma — Personal Color Styling</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" id="logoLink">
+        <div class="logo-dot"></div>
+        <span>Chroma</span>
+      </a>
+      <div class="nav-links">
+        <button data-scroll="#services">Services</button>
+        <button data-scroll="#how-it-works">How It Works</button>
+        <button data-scroll="#quiz">Color Quiz</button>
+        <button data-scroll="#testimonials">Testimonials</button>
+        <button data-scroll="#contact">Contact</button>
+        <button class="btn-book" data-scroll="#contact">Book a Session</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <button data-scroll="#services">Services</button>
+      <button data-scroll="#how-it-works">How It Works</button>
+      <button data-scroll="#quiz">Color Quiz</button>
+      <button data-scroll="#testimonials">Testimonials</button>
+      <button data-scroll="#contact">Contact</button>
+      <button class="btn-book-mobile" data-scroll="#contact">Book a Session</button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero">
+      <canvas id="heroCanvas"></canvas>
+      <div class="hero-gradient"></div>
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path></svg>
+            <span>Discover Your True Colors</span>
+          </div>
+          <h1>Wear the Colors<br><em>You Were Born</em><br>to Shine In</h1>
+          <p>Expert color analysis that reveals the shades, tones, and hues that make you look radiant every single day.</p>
+          <div class="hero-buttons">
+            <button class="btn-primary" data-scroll="#quiz">
+              Start Your Color Quiz
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <button class="btn-secondary" data-scroll="#services">Explore Services</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="orb orb-warm float-1"><span>Warm</span></div>
+          <div class="orb orb-soft float-2"><span>Soft</span></div>
+          <div class="orb orb-cool float-3"><span>Cool</span></div>
+          <div class="orb orb-deep float-4"><span>Deep</span></div>
+          <div class="orb orb-center"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section-cream">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label label-mauve">What We Offer</span>
+          <h2>Services Designed Around You</h2>
+          <p>From deep-dive color analysis to hands-on shopping, every service is tailored to help you feel confident in your palette.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal" data-accent="taupe">
+            <div class="card-accent"></div>
+            <div class="service-icon icon-taupe">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
+            </div>
+            <h3>Personal Color Analysis</h3>
+            <p>A comprehensive 90-minute session analyzing your skin tone, hair, and eyes to determine your unique color season.</p>
+            <div class="service-footer">
+              <span class="price">From $149</span>
+              <span class="learn-more">Learn more <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+            </div>
+          </div>
+          <div class="service-card reveal" data-accent="mauve">
+            <div class="card-accent"></div>
+            <div class="service-icon icon-mauve">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <h3>Wardrobe Consultation</h3>
+            <p>In-home or virtual closet review to identify what to keep, donate, and add, all aligned with your color palette.</p>
+            <div class="service-footer">
+              <span class="price">From $199</span>
+              <span class="learn-more">Learn more <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+            </div>
+          </div>
+          <div class="service-card reveal" data-accent="slate">
+            <div class="card-accent"></div>
+            <div class="service-icon icon-slate">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            </div>
+            <h3>Shopping Companion</h3>
+            <p>I join you on a curated shopping trip, selecting pieces that complement your palette and personal style.</p>
+            <div class="service-footer">
+              <span class="price">From $249</span>
+              <span class="learn-more">Learn more <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+            </div>
+          </div>
+          <div class="service-card reveal" data-accent="taupe">
+            <div class="card-accent"></div>
+            <div class="service-icon icon-taupe">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            </div>
+            <h3>Digital Color Palette</h3>
+            <p>Receive a custom digital palette card with your exact colors, plus a personalized lookbook for every occasion.</p>
+            <div class="service-footer">
+              <span class="price">From $79</span>
+              <span class="learn-more">Learn more <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="section-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label label-taupe">The Process</span>
+          <h2>How It Works</h2>
+          <p>A simple, elegant journey from curiosity to confidence.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-line"></div>
+          <div class="step reveal">
+            <div class="step-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg>
+            </div>
+            <span class="step-number">01</span>
+            <h3>Book Your Session</h3>
+            <p>Choose a time that works for you. Virtual sessions available worldwide.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </div>
+            <span class="step-number">02</span>
+            <h3>Color Assessment</h3>
+            <p>I analyze your natural features using professional draping and lighting.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
+            </div>
+            <span class="step-number">03</span>
+            <h3>Receive Your Palette</h3>
+            <p>Get your personalized color card with exact shades for clothing, makeup, and accessories.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.57a2 2 0 0 0-1.34-2.23z"></path></svg>
+            </div>
+            <span class="step-number">04</span>
+            <h3>Style Confidently</h3>
+            <p>Use your palette to shop, dress, and present your best self every day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLOR QUIZ -->
+    <section id="quiz" class="section-cream">
+      <div class="container container-sm">
+        <div class="section-header">
+          <span class="section-label label-slate">Discover Yourself</span>
+          <h2>Find Your Color Season</h2>
+          <p>Answer a few simple questions to get a quick idea of your color direction.</p>
+        </div>
+        <div class="quiz-card reveal">
+          <div id="quizQuestions">
+            <div class="quiz-header">
+              <span id="quizCounter">Question 1 of 5</span>
+              <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgress"></div></div>
+            </div>
+            <h3 id="quizQuestion"></h3>
+            <div class="quiz-options" id="quizOptions"></div>
+          </div>
+          <div id="quizResult" style="display:none"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label label-mauve">Client Stories</span>
+          <h2>What Clients Say</h2>
+        </div>
+        <div class="testimonial-wrapper reveal">
+          <div class="testimonial-card">
+            <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
+            <div class="testimonial-slider" id="testimonialSlider">
+              <div class="testimonial-slides" id="testimonialSlides"></div>
+            </div>
+            <div class="testimonial-controls">
+              <div class="testimonial-dots" id="testimonialDots"></div>
+              <div class="testimonial-arrows">
+                <button class="arrow-btn" id="prevBtn" aria-label="Previous"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+                <button class="arrow-btn" id="nextBtn" aria-label="Next"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-cream">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label label-taupe">Get In Touch</span>
+          <h2>Start Your Journey</h2>
+          <p>Ready to discover your colors? Send a message and I'll get back to you within 24 hours.</p>
+        </div>
+        <div class="contact-grid reveal">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon icon-taupe"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+              <div><h4>Email</h4><p>hello@chroma.studio</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon icon-mauve"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.72 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.63 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+              <div><h4>Phone</h4><p>+1 (555) 234-5678</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon icon-slate"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+              <div><h4>Studio</h4><p>142 W 24th Street, Suite 3B<br>New York, NY 10011</p></div>
+            </div>
+            <div class="studio-hours">
+              <h4>Studio Hours</h4>
+              <div class="hours-row"><span>Monday — Friday</span><span>10:00 AM — 6:00 PM</span></div>
+              <div class="hours-row"><span>Saturday</span><span>11:00 AM — 4:00 PM</span></div>
+              <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div id="formSuccess" class="form-success" style="display:none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              Thank you! I'll be in touch soon.
+            </div>
+            <div class="form-field"><label for="fname">Name</label><input type="text" id="fname" required placeholder="Your name"></div>
+            <div class="form-field"><label for="femail">Email</label><input type="email" id="femail" required placeholder="you@email.com"></div>
+            <div class="form-field">
+              <label for="fservice">Service Interest</label>
+              <select id="fservice">
+                <option value="">Select a service...</option>
+                <option>Personal Color Analysis</option>
+                <option>Wardrobe Consultation</option>
+                <option>Shopping Companion</option>
+                <option>Digital Color Palette</option>
+                <option>General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-field"><label for="fmessage">Message</label><textarea id="fmessage" required rows="4" placeholder="Tell me about what you're looking for..."></textarea></div>
+            <button type="submit" class="btn-submit" id="submitBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><div class="logo-dot"></div><span>Chroma</span></div>
+          <p>Personal color analysis and styling services that help you discover the shades that make you look and feel your absolute best.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Color Analysis</a></li>
+            <li><a href="#services">Wardrobe Consultation</a></li>
+            <li><a href="#services">Shopping Companion</a></li>
+            <li><a href="#services">Digital Palette</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Follow</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="#" aria-label="Pinterest"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footerYear"></span> Chroma. All rights reserved.</p>
+        <button class="back-to-top" id="backToTop">Back to top <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
